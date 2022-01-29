@@ -1,0 +1,288 @@
+@keyframes onPlay {
+  0% {
+    font-size: 0px;
+  }
+  10% {
+    font-size: 5px;
+  }
+  20% {
+    font-size: 10px;
+  }
+  30% {
+    font-size: 20px;
+  }
+  40% {
+    font-size: 25px;
+  }
+  50% {
+    font-size: 30px;
+  }
+  60% {
+    font-size: 35px;
+  }
+  70% {
+    font-size: 40px;
+  }
+  80% {
+    font-size: 45px;
+  }
+  90% {
+    font-size: 48px;
+  }
+  100% {
+    font-size: 50px;
+  }
+}
+
+body {
+  font-size: 20px;
+  background-image: url("../images/game/tic-tac-toe.png");
+  background-size: 550px;
+  user-select: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td {
+  height: 130px;
+  width: 130px;
+}
+
+#square1-1 {
+  border-bottom: solid white;
+  border-right: solid white;
+}
+
+#square1-2 {
+  border-bottom: solid white;
+}
+
+#square1-3 {
+  border-bottom: solid white;
+  border-left: solid white;
+}
+
+#square2-1 {
+  border-bottom: solid white;
+  border-right: solid white;
+}
+
+#square2-2 {
+  border-bottom: solid white;
+}
+
+#square2-3 {
+  border-bottom: solid white;
+  border-left: solid white;
+}
+
+#square3-2 {
+  border-right: solid white;
+  border-left: solid white;
+}
+/* Botao de voltar*/
+#back {
+  position: absolute;
+  left: 150px;
+  top: 580px;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  text-decoration: none;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+#back:hover {
+  color: rgb(110, 109, 109);
+  transition: 0.3s;
+}
+/* Botão para troca de simbolos*/
+#trade {
+  position: inherit;
+  margin-left: 117px;
+  width: 52px;
+  height: 57px;
+  padding-left: 30px;
+  padding-top: 5px;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+#trade:hover {
+  background-color: rgb(151, 150, 150);
+  transition: 0.3s;
+}
+
+/* arrow, right e left são para fazer as setas do botão de troca*/
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  z-index: 1;
+}
+
+.right {
+  transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(-225deg);
+}
+/* Texto acima do botão de troca*/
+#switch {
+  margin-top: 30px;
+  position: inherit;
+  margin-left: 70px;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  z-index: 1;
+}
+/* Div que engloba todas as outras*/
+#tela-tic {
+  background-color: rgb(50, 82, 221);
+  height: 670px;
+  width: 1000px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50px;
+  z-index: 0;
+  box-shadow: 0 0 1em black;
+}
+/* Setar nomes na tela*/
+#player {
+  font-size: 28pt;
+  margin-left: 100px;
+  margin-bottom: 0px;
+  display: inline-block;
+  width: fit-content;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  z-index: 1;
+}
+
+.playerInfo {
+  flex: 1;
+}
+
+.changeInfo {
+  flex: 1;
+}
+
+.botInfo {
+  flex: 1;
+}
+
+#bot {
+  font-size: 28pt;
+  margin-left: 80px;
+  margin-bottom: 0px;
+  display: inline-block;
+  width: fit-content;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  z-index: 1;
+}
+/* Setar Scores na tela*/
+#playerScore {
+  margin-left: 140px;
+  position: inherit;
+  width: fit-content;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  border: solid 2px;
+  padding: 20px;
+  z-index: 1;
+}
+
+#botScore {
+  margin-left: 120px;
+  position: inherit;
+  width: fit-content;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  border: solid 2px;
+  padding: 20px;
+  z-index: 1;
+}
+
+#canvas {
+  position: inherit;
+  left: 29%;
+  top: 28%;
+  cursor: pointer;
+  visibility: hidden;
+}
+/* Botão de reset*/
+#reset {
+  position: inherit;
+  left: 780px;
+  top: 580px;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  cursor: pointer;
+}
+
+.status {
+  width: 100%;
+  display: flex;
+}
+
+#reset:hover {
+  color: rgb(110, 109, 109);
+  transition: 0.3s;
+}
+/* Simbolos dos jogadores*/
+#playerSymbol {
+  display: inline-block;
+  position: inherit;
+  width: fit-content;
+  padding-left: 5px;
+  text-align: center;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  color: white;
+  z-index: 1;
+}
+
+#botSymbol {
+  display: inline-block;
+  position: inherit;
+  width: fit-content;
+  padding-left: 5px;
+  text-align: center;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  color: white;
+  z-index: 1;
+}
+
+.symbolInSquare {
+  color: white;
+  font-size: 50px;
+  padding-left: 34%;
+}
+
+#start {
+  position: absolute;
+  left: 340px;
+  top: 320px;
+  font-size: 50px;
+  cursor: pointer;
+  color: white;
+}
+
+#start:hover {
+  color: rgb(110, 109, 109);
+}
+
+.animatedSymbol {
+  animation: onPlay 0.1s normal none step-end;
+}

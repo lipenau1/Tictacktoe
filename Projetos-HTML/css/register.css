@@ -1,0 +1,113 @@
+body {
+  font-size: 20px;
+  background-image: url("../images/game/tic-tac-toe.png");
+  background-size: 550px;
+}
+/* Logo login*/
+#login {
+  position: absolute;
+  padding-left: 30px;
+  font-size: 60px;
+  margin-top: -360px;
+  margin-left: 80px;
+  z-index: 2;
+}
+
+button {
+  font-family: "Varela Round", "Lucida Sans", "Lucida Sans Regular",
+    "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+}
+/* Tela do meio retangular*/
+#tela {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  color: rgb(255, 255, 255);
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  background-color: rgb(50, 82, 221);
+  box-shadow: 0 0 1em black;
+  border-radius: 10px;
+  padding-top: 400px;
+  z-index: 0;
+}
+
+#inputs {
+  padding-left: 100px;
+  color: white;
+  margin-top: -250px;
+  margin-left: 75px;
+  z-index: 1;
+}
+
+/* tirar efeito dos inputs*/
+#email:focus {
+  outline: none;
+}
+
+#senha:focus {
+  outline: none;
+}
+
+#email {
+  border-radius: 5px;
+  border-color: rgb(255, 255, 255);
+}
+
+#senha {
+  border-radius: 5px;
+  border-color: rgb(255, 255, 255);
+}
+/* Botão de confirma*/
+#confirma {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  border: 2px solid rgb(0, 0, 0);
+  cursor: pointer;
+  margin-left: 89px;
+  padding: 10px 32px;
+  border-radius: 100px;
+}
+
+#confirma:hover {
+  background-color: rgb(146, 146, 146);
+  transition: 0.3s;
+}
+
+#confirma:focus {
+  outline: none;
+}
+/* Parte de baixo do login*/
+#cad-text {
+  position: relative;
+  color: rgb(252, 252, 252);
+  font-size: 15px;
+  margin-top: 17px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 617px;
+  height: 45px;
+  padding: 15px;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  z-index: 3;
+  text-decoration: none;
+}
+
+#contaCad {
+  font-size: 20px;
+  margin-top: 11px;
+  margin-left: 65%;
+  color: white;
+}
+
+#contaCad:hover {
+  color: rgb(77, 76, 76);
+  transition: 0.3s;
+}
+
+#link-back {
+  text-decoration: none;
+}

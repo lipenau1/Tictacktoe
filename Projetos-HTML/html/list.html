@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8" />
+  <title>Projeto: User List</title>
+  <head>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/list.css" />
+    <script
+      src="https://kit.fontawesome.com/5f4dbd50fd.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="transbox" id="transbox"></div>
+    <div class="loader" id="loader"></div>
+    <div id="outer">
+      <div class="head">
+        <div class="title">
+          <h1 class="heading" class="flex">
+            <span id="user">User</span> Management
+          </h1>
+        </div>
+        <div class="flex buttons">
+          <a href="form.html"
+            ><button>
+              <img
+                class="fas fa-plus-circle"
+                src="../images\Icons\add.svg"
+              /><span id="excel">Add New User</span>
+            </button></a
+          >
+          <button>
+            <img
+              class="fas fa-plus-circle"
+              src="../images\Icons\icon-file.svg"
+            /><span id="excel">Export to Excel</span>
+          </button>
+        </div>
+      </div>
+      <table id="table">
+        <thead>
+          <tr>
+            <th id="userId">#</th>
+            <th id="userName">Name</th>
+            <th>Date Created</th>
+            <th><span id="role">Role</span></th>
+            <th><span id="Stats">Status</span></th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="body"></tbody>
+      </table>
+      <div class="entries">
+        Showing <span id="showingNumber" class="entriesNumber">5</span> of
+        <span class="entriesNumber" id="showingTotal">5</span> entries
+      </div>
+      <div class="pages" id="pagina">
+        <span class="fowardBack" id="back">Previous</span>
+        <span id="buttonSpace"></span>
+        <span class="fowardBack" id="next">Next</span>
+      </div>
+    </div>
+  </body>
+  <script src="../services/user.js"></script>
+  <script src="../services/list.js"></script>
+</html>

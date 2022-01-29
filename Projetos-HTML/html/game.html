@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8" />
+  <title>Projeto: Tic-Tac-Toe</title>
+  <head>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/game.css" />
+  </head>
+  <body onload="resetAPI()">
+    <div id="tela-tic">
+      <div id="start" onclick="begin()">Click to Start</div>
+      <div class="status">
+        <div class="playerInfo">
+          <h2 id="player">Player:</h2>
+          <h2 id="playerSymbol">X</h2>
+          <h1 id="playerScore">0</h1>
+        </div>
+
+        <div class="changeInfo">
+          <h3 id="switch">Change Simbol</h3>
+          <div id="trade">
+            <p class="arrow left"></p>
+            <p class="arrow right"></p>
+          </div>
+        </div>
+
+        <div class="botInfo">
+          <h2 id="bot">Bot:</h2>
+          <h2 id="botSymbol">O</h2>
+          <h1 id="botScore">0</h1>
+        </div>
+      </div>
+
+      <table id="canvas">
+        <thead></thead>
+        <tr>
+          <td id="square1-1">
+            <h1 id="X11" class="symbolInSquare"></h1>
+          </td>
+          <td id="square1-2">
+            <h1 id="X12" class="symbolInSquare"></h1>
+          </td>
+          <td id="square1-3">
+            <h1 id="X13" class="symbolInSquare"></h1>
+          </td>
+        </tr>
+        <tr>
+          <td id="square2-1">
+            <h1 id="X21" class="symbolInSquare"></h1>
+          </td>
+          <td id="square2-2">
+            <h1 id="X22" class="symbolInSquare"></h1>
+          </td>
+          <td id="square2-3">
+            <h1 id="X23" class="symbolInSquare"></h1>
+          </td>
+        </tr>
+        <tr>
+          <td id="square3-1">
+            <h1 id="X31" class="symbolInSquare"></h1>
+          </td>
+          <td id="square3-2">
+            <h1 id="X32" class="symbolInSquare"></h1>
+          </td>
+          <td id="square3-3">
+            <h1 id="X33" class="symbolInSquare"></h1>
+          </td>
+        </tr>
+      </table>
+      <h2 id="reset" onclick="entryStart();">Reset</h2>
+      <a href="list.html"><h2 id="back">Back</h2></a>
+    </div>
+    <script src="../services/user.js"></script>
+    <script src="../services/tictactoe.js"></script>
+    <script src="../js/tictactoe.js"></script>
+  </body>
+</html>
